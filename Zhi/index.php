@@ -16,13 +16,14 @@ imagecopyresized($image,$qqimg,133,35,0,0, 550,550,630,630);
 imagecopyresized($image,$img,0,0,0,0,760,638,760,638);//合成
 
 //获取当前时间
-$time = date("Y-m-d H:i:s");
+// $time = date("Y-m-d H:i:s");
 //获取用户ip
 // $ip = $_SERVER["REMOTE_ADDR"];
 
 ob_clean();
 //以当前时间命名存储生成的图片，这里我是用来判断违规数据的
-imagejpeg($image,'image/'.$time.'-'.$qq.'.jpg');
+// imagejpeg($image,'image/'.$time.'-'.$qq.'.jpg');
+
 //在浏览器显示生成的图片，生成格式后缀为bin
 imagejpeg($image);
 //可添加跳转，让用户可以从浏览器直接保存图片
